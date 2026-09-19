@@ -4,15 +4,14 @@ public class zoo
     public static void main(String[] args)
     {
         Scanner teclado = new Scanner(System.in);
-        int n, i, edad, tarifa, total;
-        total = 0;
+        int n, i, edad, tarifa = 0, total = 0;
 
         System.out.println(" Bienvenido al zoologico");
         System.out.println("-------------------------");
         System.out.println("Cuantos visitantes son?");
         n = teclado.nextInt();
 
-        for (int i = 1; i <= n; i++)
+        for ( i = 1; i <= n; i++)
         {
             System.out.println("Ingrese la edad del visitante " + i + ":");
             edad = teclado.nextInt();
@@ -23,13 +22,13 @@ public class zoo
             }
             else
             {
-                if (edad <=5 && edad >=12)
+                if (edad >=5 && edad <=12)
                 {
                     tarifa = 12000;
                 }
                 else
                 {
-                    if (edad <=13 && edad >=60)
+                    if (edad >=13 && edad <=60)
                     {
                         tarifa = 15000;
                     }
