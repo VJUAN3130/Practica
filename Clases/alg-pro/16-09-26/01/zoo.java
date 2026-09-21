@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-public class zoo {
-    public static void main(String[] args) {
+public class zoo
+{
+    public static void main(String[] args)
+    {
         Scanner teclado = new Scanner(System.in);
         int n, i, edad, tarifa = 0, total = 0;
 
@@ -11,18 +13,23 @@ public class zoo {
         System.out.println("¿Cuántos visitantes son?");
         n = teclado.nextInt();
 
-        for (i = 1; i <= n; i++) {
+        for (i = 1; i <= n; i++)
+        {
             System.out.print("\nIngrese la edad del visitante " + i + ": ");
             edad = teclado.nextInt();
 
             // Usamos 'else if' para tener una estructura más limpia
-            if (edad >= 0 && edad <= 4) {
+            if (edad >= 0 && edad <= 4)
+            {
                 tarifa = 8000;
-            } else if (edad >= 5 && edad <= 12) {
+            } else if (edad >= 5 && edad <= 12)
+            {
                 tarifa = 12000;
-            } else if (edad >= 13 && edad <= 60) {
+            } else if (edad >= 13 && edad <= 60)
+            {
                 tarifa = 15000;
-            } else {
+            } else
+            {
                 // Manejo de edades inválidas o mayores de 60
                 System.out.println("No cumples con la edad requerida o la edad es inválida.");
                 i--; // Restamos 1 a la 'i' para que vuelva a pedir los datos de este mismo visitante
