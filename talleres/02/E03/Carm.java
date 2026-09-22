@@ -2,7 +2,6 @@ import java.util.Scanner;
 public class Carm
 {
 
-    // 1. CONSTANTES: Evitamos los "Magic Numbers".
     // Si la norma ambiental cambia mañana, solo editas aquí, no tienes que buscar por todo el código.
     private static final double MIN_PH = 6.5;
     private static final double MAX_PH = 8.5;

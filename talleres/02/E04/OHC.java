@@ -32,11 +32,13 @@ public class OHC
                         if (ocupacionDia >= MIN_OCUPACION && ocupacionDia <= MAX_OCUPACION)
                         {
                             datosValido = true;
-                        } else
+                        }
+                        else
                         {
                             System.out.println("[!] Error: El porcentaje debe estar entre 0 y 100.");
                         }
-                    } else
+                    }
+                    else
                     {
                         System.out.println("[!] Error: Por favor ingrese un número válido (sin letras).");
                         teclado.next();
