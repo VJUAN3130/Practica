@@ -24,7 +24,6 @@ public class OHC
                 {
                     // MEJORA: Se incluye la variable 'i' para indicar qué día se está evaluando
                     System.out.print("\nIngrese el porcentaje de ocupación del día " + i + ": ");
-
                     if (teclado.hasNextDouble())
                     {
                         ocupacionDia = teclado.nextDouble();
