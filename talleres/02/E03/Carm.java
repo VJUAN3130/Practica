@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CarmPro
+public class Carm
 {
 
     // 1. CONSTANTES: Evitamos los "Magic Numbers".
@@ -25,7 +25,8 @@ public class CarmPro
                 if (teclado.hasNextInt())
                 {
                     cantidadMediciones = teclado.nextInt();
-                    if (cantidadMediciones > 0) {
+                    if (cantidadMediciones > 0)
+                    {
                         break; // Dato válido, salimos del bucle
                     }
                     else

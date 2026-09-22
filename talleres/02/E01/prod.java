@@ -1,4 +1,3 @@
-package E01;
 import java.util.Scanner;
 public class prod
 {

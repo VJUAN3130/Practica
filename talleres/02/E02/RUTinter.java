@@ -3,7 +3,6 @@ Enunciado: Lea cuántos tramos tiene una ruta (Barranquilla–Sabanalarga–Saba
 Tomás) y la distancia de cada tramo; calcule la distancia total.
 Resultado esperado: Con tramos 25, 12, 8 km: distancia total = 45 km
 */
-package E02;
 import java.util.Scanner;
 public class RUTinter
 {
