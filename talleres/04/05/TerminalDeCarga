@@ -1,0 +1,140 @@
+Algoritmo TerminalDeCarga
+
+Constantes
+Real PESO_MAX = 30
+Real PESO_MIN = 15
+Entero MUELLES_MAX = 5
+Real CAPACIDAD_BARCAZA = 10
+
+Tipos
+
+Enum TipoCarga {ALIMENTOS, TECNOLOGIA, AUTOS, CARGAS_PESADAS, CONTENEDORES}
+Enum Turno {DIURNO, NOCTURNO, MATUTINO}
+
+Variables
+Cadena ID
+Byte muelle
+Entero turnoOpcion, opcionCarga, ND, i, contadorFueraRango
+Float pesoDespacho
+Double pesoTotal, barcazasNecesarias
+Char codigoTarifa
+Booleano muelleValido, banderaSobrepeso
+TipoCarga tipoCargamento
+Turno turnoTrabajador
+
+Inicio
+
+pesoTotal = 0
+contadorFueraRango = 0
+banderaSobrepeso = Falso
+Escribir ("=== Sistema de Registro - Terminal de Carga ===")
+Escribir ("Ingrese su identificacion: ")
+Leer ID
+Escribir ("Ingrese el numero de muelle asignado (1 a ", MUELLES_MAX, "): ")
+Leer muelle
+
+Si muelle >= 1 Y muelle <= MUELLES_MAX Entonces
+muelleValido = Verdadero
+Escribir ("Tu muelle esta disponible")
+
+SiNo
+muelleValido = Falso
+Escribir ("Tu muelle no se encuentra en esta terminal, intenta de nuevo")
+FinSi
+
+Hasta Que muelleValido = Verdadero
+Escribir ("Ingrese su turno (1=Diurno, 2=Nocturno, 3=Matutino): ")
+Leer turnoOpcion
+
+Segun turnoOpcion Hacer
+
+1: turnoTrabajador = DIURNO
+
+2:turnoTrabajador = NOCTURNO
+
+3:turnoTrabajador = MATUTINO
+
+De Otro Modo:
+
+Escribir ("Turno no valido, se asigna DIURNO por defecto")
+turnoTrabajador = DIURNO
+
+FinSegun
+
+Escribir ("Turno asignado: ", turnoTrabajador)
+Escribir ("Cuantos despachos tiene asignados? ")
+Leer ND
+
+Para i = 1 Hasta ND Hacer
+Escribir ("--- Despacho ", i, " de ", ND, " ---")
+Escribir ("Peso del cargamento en toneladas: ")
+Leer pesoDespacho
+
+Escribir ("Tipo de carga: 1=Alimentos 2=Tecnologia 3=Autos 4=Cargas pesadas 5=Contenedores")
+Escribir ("Ingrese el tipo (1 a 5): ")
+Leer opcionCarga
+
+Segun opcionCarga Hacer
+
+1:tipoCargamento = ALIMENTOS
+
+codigoTarifa = 'A'
+
+2:tipoCargamento = TECNOLOGIA
+codigoTarifa = 'T'
+
+3:tipoCargamento = AUTOS
+codigoTarifa = 'V'
+
+4:tipoCargamento = CARGAS_PESADAS
+codigoTarifa = 'P'
+
+5:tipoCargamento = CONTENEDORES
+codigoTarifa = 'K'
+
+De Otro Modo:
+
+Escribir ("Tipo de carga no valido")
+codigoTarifa = '-'
+
+FinSegun
+
+Escribir ("Codigo de tarifa asignado: ", codigoTarifa)
+
+Si pesoDespacho >= PESO_MIN Y pesoDespacho <= PESO_MAX Entonces
+
+Escribir ("Peso dentro del rango permitido, desembarque normal")
+
+SiNo
+
+Escribir ("Peso fuera de rango: desembarque con precaucion y equipo de apoyo")
+contadorFueraRango = contadorFueraRango + 1
+banderaSobrepeso = Verdadero
+
+FinSi
+
+pesoTotal = pesoTotal + pesoDespacho
+
+FinPara
+
+Escribir ("Peso total acumulado de todos los despachos: ", pesoTotal)
+barcazasNecesarias = 0
+
+Mientras pesoTotal > 0 Hacer
+barcazasNecesarias = barcazasNecesarias + 1
+pesoTotal = pesoTotal - CAPACIDAD_BARCAZA
+
+FinMientras
+
+Escribir ("Numero de barcazas necesarias para todo el cargamento: ", barcazasNecesarias)
+
+Si banderaSobrepeso = Verdadero Entonces
+
+Escribir ("Se registraron ", contadorFueraRango, " despachos fuera del rango de peso permitido")
+
+SiNo
+
+Escribir ("Todos los despachos estuvieron dentro del rango permitido")
+
+FinSi
+Fin
