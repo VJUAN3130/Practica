@@ -19,4 +19,4 @@ El código está categorizado principalmente por tecnología para facilitar su l
 ## 📝 Enunciados de los Ejercicios
 Para entender el contexto de cada solución, los enunciados y requerimientos de cada ejercicio, taller o examen se encuentran:
 - Como comentarios explicativos en la parte superior de cada archivo de código.
-- (En el caso de proyectos más largos) Dentro de un archivo de texto o PDF adjunto en la misma carpeta del ejercicio.
+- (En el caso de proyectos más largos) Dentro de un archivo de texto o PDF adjunto en la misma carpeta del ejercicio
