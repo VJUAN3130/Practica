@@ -118,6 +118,12 @@ public class TerminalDeCarga
                     break;
             }
 
+            System.out.println("\n=== Resumen de operaciones para el ID: " + id + " ===");
+            if (banderaSobrepeso)
+            {
+                System.out.println("Se registraron " + contadorFueraRango + " despachos fuera del rango de peso permitido");
+            }
+
             System.out.println("Codigo de tarifa asignado: " + codigoTarifa);
             System.out.println("Tipo de cargamento: " + tipoCargamento);
 
