@@ -13,7 +13,6 @@
  */
 
 import java.util.Scanner;
-
 public class PromedioNotasIUB
 {
 

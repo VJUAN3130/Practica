@@ -22,7 +22,7 @@ public class TablaMultiplicar
         Scanner teclado = new Scanner(System.in);
 
         System.out.println(" === Generador de Tablas de Multiplicar ===");
-        System.out.print("¿Qué tabla de multiplicar desea ver? Ingrese un número: ");
+        System.out.print("\n¿Qué tabla de multiplicar desea ver? Ingrese un número: ");
 
         int numeroElegido = teclado.nextInt();
 
